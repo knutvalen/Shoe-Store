@@ -1,4 +1,5 @@
 # The Shoe Store
+[![Build Status](https://app.bitrise.io/app/a30acf8ff76d8774/status.svg?token=grMzD210XLUfAdKqvDhN4g)](https://app.bitrise.io/app/a30acf8ff76d8774)
 
 This project will consist of five screens. You don't have to create a shoe store, you can use any other item as long as you create the following screens. You will be creating:
 
@@ -10,13 +11,7 @@ This project will consist of five screens. You don't have to create a shoe store
 
 ## Getting Started
 
-Open the starter project in the latest stable version of Android Studio.
-
-Open the starter project in Android Studio
-
-##Steps
-
-1. Open the starter project in Android Studio
+1. Open the starter project in the latest stable version of Android Studio.
 
 2. Add the navigation libraries to the app build.gradle file
 
