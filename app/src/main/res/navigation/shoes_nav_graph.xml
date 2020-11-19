@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shoes_nav_graph"
+    app:startDestination="@id/shoesFragment">
+
+    <fragment
+        android:id="@+id/shoesFragment"
+        android:name="com.udacity.shoestore.screens.shoes.ShoesFragment"
+        android:label="ShoesFragment"
+        tools:layout="@layout/fragment_shoes">
+        <action
+            android:id="@+id/action_shoesFragment_to_shoeDetailFragment"
+            app:destination="@id/shoeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shoeDetailFragment"
+        android:name="com.udacity.shoestore.screens.shoeDetail.ShoeDetailFragment"
+        android:label="ShoeDetailFragment"
+        tools:layout="@layout/fragment_shoe_detail" />
+</navigation>
