@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.udacity.shoestore.screens.LoginFragment"
+        android:name="com.udacity.shoestore.screens.login.LoginFragment"
         android:label="@string/log_in"
         tools:layout="@layout/fragment_login">
         <action
@@ -20,7 +20,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.udacity.shoestore.screens.WelcomeFragment"
+        android:name="com.udacity.shoestore.screens.welcome.WelcomeFragment"
         android:label="@string/welcome"
         tools:layout="@layout/fragment_welcome">
         <action
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/instructionsFragment"
-        android:name="com.udacity.shoestore.screens.InstructionsFragment"
+        android:name="com.udacity.shoestore.screens.instructions.InstructionsFragment"
         android:label="@string/instructions"
         tools:layout="@layout/fragment_instructions" />
 

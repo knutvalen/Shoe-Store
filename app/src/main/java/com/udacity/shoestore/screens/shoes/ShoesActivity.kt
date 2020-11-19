@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.ActivityShoesBinding
+import com.udacity.shoestore.viewModels.ShoesViewModel
 
 class ShoesActivity : AppCompatActivity(), LifecycleObserver {
 

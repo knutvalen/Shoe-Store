@@ -1,4 +1,4 @@
-package com.udacity.shoestore.screens
+package com.udacity.shoestore.screens.welcome
 
 import android.os.Bundle
 import android.view.*

@@ -1,4 +1,4 @@
-package com.udacity.shoestore.screens
+package com.udacity.shoestore.screens.login
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
