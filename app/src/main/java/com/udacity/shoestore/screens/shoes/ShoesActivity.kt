@@ -11,6 +11,8 @@ import com.udacity.shoestore.databinding.ActivityShoesBinding
 
 class ShoesActivity : AppCompatActivity(), LifecycleObserver {
 
+    private lateinit var viewModel: ShoesViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

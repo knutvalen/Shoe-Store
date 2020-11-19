@@ -1,4 +1,4 @@
-package com.udacity.shoestore.screens.shoeDetail
+package com.udacity.shoestore.screens.shoes
 
 import android.os.Bundle
 import android.view.LayoutInflater
