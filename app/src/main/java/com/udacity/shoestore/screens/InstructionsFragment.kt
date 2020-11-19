@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentInstructionsBinding
 import com.udacity.shoestore.R
 import com.udacity.shoestore.screens.shoes.ShoesActivity
@@ -28,7 +27,9 @@ class InstructionsFragment : Fragment() {
 
         binding.button.setOnClickListener {
             val shoesIntent = Intent(context, ShoesActivity::class.java)
+            shoesIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(shoesIntent)
+            activity?.finish()
         }
 
         return binding.root
