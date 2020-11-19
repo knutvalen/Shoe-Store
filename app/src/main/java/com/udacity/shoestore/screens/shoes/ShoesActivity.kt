@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
@@ -27,6 +28,10 @@ class ShoesActivity : AppCompatActivity(), LifecycleObserver {
         if (savedInstanceState != null) {
             //TODO
         }
+
+        viewModel = ViewModelProvider(this).get(ShoesViewModel::class.java)
+        binding.shoesViewModel = viewModel
+        binding.lifecycleOwner = this
     }
 
     override fun onSupportNavigateUp(): Boolean {
