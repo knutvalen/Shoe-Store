@@ -38,6 +38,15 @@ class ShoesViewModel : ViewModel() {
                         "cool. Energy-returning cushioning and a flexible outsole work together to " +
                         "give you a smooth ride from touch-down to toe-off."
             ),
+            Shoe(
+                "Air Force 1 '07",
+                44.0,
+                "Nike",
+                "The Nike Air Force 1 '07 is the b-ball legend you know best: crisp " +
+                        "leather, bold colours and the perfect amount of flash to make you shine. " +
+                        "Holographic Swooshes on selected colourways will keep you turning heads " +
+                        "from sunrise to sunset."
+            ),
         )
     }
 
