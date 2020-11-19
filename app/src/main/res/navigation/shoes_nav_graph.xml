@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/shoesFragment"
         android:name="com.udacity.shoestore.screens.shoes.ShoesFragment"
-        android:label="ShoesFragment"
+        android:label="@string/shoes"
         tools:layout="@layout/fragment_shoes">
         <action
             android:id="@+id/action_shoesFragment_to_shoeDetailFragment"
@@ -17,6 +17,6 @@
     <fragment
         android:id="@+id/shoeDetailFragment"
         android:name="com.udacity.shoestore.screens.shoeDetail.ShoeDetailFragment"
-        android:label="ShoeDetailFragment"
+        android:label="@string/add_shoe"
         tools:layout="@layout/fragment_shoe_detail" />
 </navigation>
