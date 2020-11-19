@@ -26,7 +26,18 @@ class ShoesViewModel : ViewModel() {
                         "in the day. Now, whether at a festival or walking in the street you can " +
                         "enjoy yourself without the fear of being stepped on. The serrated 3-Stripes " +
                         "detail and adidas Superstar box logo adds OG authenticity to your look."
-            )
+            ),
+            Shoe(
+                "Ultraboost",
+                44.0,
+                "Adidas",
+                "RESPONSIVE SHOES MADE FOR LONG RUNS ON CITY STREETS.\n" +
+                        "\n" +
+                        "Get that best-ever feeling on every run. These neutral shoes have a " +
+                        "stretchy knit upper with ventilation in key sweat zones to help you stay " +
+                        "cool. Energy-returning cushioning and a flexible outsole work together to " +
+                        "give you a smooth ride from touch-down to toe-off."
+            ),
         )
     }
 
