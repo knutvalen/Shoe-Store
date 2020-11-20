@@ -14,12 +14,11 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoesBinding
+import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.viewModels.ShoesViewModel
 import timber.log.Timber
 
 class ShoesFragment : Fragment() {
-
-    private val viewModel: ShoesViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,11 +32,14 @@ class ShoesFragment : Fragment() {
             false
         )
 
+        val viewModel: ShoesViewModel by activityViewModels()
+
         viewModel.eventAdd.observe(viewLifecycleOwner, Observer {
             if (it) {
                 findNavController().navigate(
                     ShoesFragmentDirections.actionShoesFragmentToShoeDetailFragment()
                 )
+
                 viewModel.onAddComplete()
             }
         })
@@ -52,7 +54,6 @@ class ShoesFragment : Fragment() {
         })
 
         binding.shoesViewModel = viewModel
-        binding.lifecycleOwner = this
 
         return binding.root
     }

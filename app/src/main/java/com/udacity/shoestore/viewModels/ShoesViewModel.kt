@@ -15,15 +15,21 @@ class ShoesViewModel : ViewModel() {
     val eventAdd: LiveData<Boolean>
         get() = _eventAdd
 
+    private val _eventSave = MutableLiveData<Boolean>()
+    val eventSave: LiveData<Boolean>
+        get() = _eventSave
+
+    private val _eventCancel = MutableLiveData<Boolean>()
+    val eventCancel: LiveData<Boolean>
+        get() = _eventCancel
+
     init {
         _shoes.value = mutableListOf(
             Shoe(
                 "Superstar",
                 44.0,
                 "Adidas",
-                "THE AUTHENTIC LOW TOP WITH THE SHELL TOE.\n" +
-                    "\n" +
-                    "Originally made for basketball courts in the '70s. Celebrated by hip hop " +
+                "Originally made for basketball courts in the '70s. Celebrated by hip hop " +
                         "royalty in the '80s. The adidas Superstar shoe is now a lifestyle staple " +
                         "for streetwear enthusiasts. The world-famous shell toe feature remains, " +
                         "providing style and protection. Just like it did on the B-ball courts back " +
@@ -35,9 +41,7 @@ class ShoesViewModel : ViewModel() {
                 "Ultraboost",
                 44.0,
                 "Adidas",
-                "RESPONSIVE SHOES MADE FOR LONG RUNS ON CITY STREETS.\n" +
-                        "\n" +
-                        "Get that best-ever feeling on every run. These neutral shoes have a " +
+                "Get that best-ever feeling on every run. These neutral shoes have a " +
                         "stretchy knit upper with ventilation in key sweat zones to help you stay " +
                         "cool. Energy-returning cushioning and a flexible outsole work together to " +
                         "give you a smooth ride from touch-down to toe-off."
@@ -64,8 +68,21 @@ class ShoesViewModel : ViewModel() {
         _eventAdd.value = false
     }
 
-    fun onAddShoe(shoe: Shoe) {
+    fun onSave(shoe: Shoe) {
         _shoes.value?.add(shoe)
+        _eventSave.value = false
+    }
+
+    fun onSave() {
+        _eventSave.value = true
+    }
+
+    fun onCancel() {
+        _eventCancel.value = true
+    }
+
+    fun onCancelComplete() {
+        _eventCancel.value = false
     }
 
 }
