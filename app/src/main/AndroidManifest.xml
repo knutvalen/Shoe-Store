@@ -14,8 +14,7 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name=".MainActivity"
-            android:windowSoftInputMode="adjustResize">
+            android:name=".MainActivity">
 
             <intent-filter>
 
@@ -26,10 +25,6 @@
             </intent-filter>
 
         </activity>
-
-        <activity
-            android:name=".screens.shoes.ShoesActivity"
-            android:windowSoftInputMode="adjustResize" />
 
     </application>
 

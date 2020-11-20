@@ -17,4 +17,5 @@
     <string name="description">Description</string>
     <string name="welcome_description">This is a friendly welcome description.</string>
     <string name="instructions_description">"I've added 3 shoes to the Shoe Store. You can add more by tapping the Add button and filling out all details about a new shoe. "</string>
+    <string name="log_out">Log out</string>
 </resources>

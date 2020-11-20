@@ -1,22 +1,18 @@
 package com.udacity.shoestore.screens.shoes
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.LinearLayout
+import android.view.*
 import android.widget.TextView
-import androidx.core.view.marginStart
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoesBinding
-import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.viewModels.ShoesViewModel
-import timber.log.Timber
 
 class ShoesFragment : Fragment() {
 
@@ -31,6 +27,8 @@ class ShoesFragment : Fragment() {
             container,
             false
         )
+
+        setHasOptionsMenu(true)
 
         val viewModel: ShoesViewModel by activityViewModels()
         binding.shoesViewModel = viewModel
@@ -55,6 +53,16 @@ class ShoesFragment : Fragment() {
         })
 
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.shoes_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
+                || super.onOptionsItemSelected(item)
     }
 
 }
