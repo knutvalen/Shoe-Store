@@ -70,11 +70,14 @@ class ShoesViewModel : ViewModel() {
 
     fun onSave(shoe: Shoe) {
         _shoes.value?.add(shoe)
-        _eventSave.value = false
     }
 
     fun onSave() {
         _eventSave.value = true
+    }
+
+    fun onSaveComplete() {
+        _eventSave.value = false
     }
 
     fun onCancel() {

@@ -33,6 +33,7 @@ class ShoesFragment : Fragment() {
         )
 
         val viewModel: ShoesViewModel by activityViewModels()
+        binding.shoesViewModel = viewModel
 
         viewModel.eventAdd.observe(viewLifecycleOwner, Observer {
             if (it) {
@@ -52,8 +53,6 @@ class ShoesFragment : Fragment() {
                 binding.shoesLinearLayout.addView(textView)
             }
         })
-
-        binding.shoesViewModel = viewModel
 
         return binding.root
     }

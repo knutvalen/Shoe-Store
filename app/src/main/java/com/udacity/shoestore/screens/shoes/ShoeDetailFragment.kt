@@ -29,6 +29,7 @@ class ShoeDetailFragment : Fragment() {
         )
 
         val viewModel: ShoesViewModel by activityViewModels()
+        binding.shoesViewModel = viewModel
 
         viewModel.eventSave.observe(viewLifecycleOwner, Observer {
             if (it) {
@@ -51,6 +52,7 @@ class ShoeDetailFragment : Fragment() {
                     )
 
                     viewModel.onSave(shoe)
+                    viewModel.onSaveComplete()
                     done()
                 }
             }
@@ -62,8 +64,6 @@ class ShoeDetailFragment : Fragment() {
                 done()
             }
         })
-
-        binding.shoesViewModel = viewModel
 
         return binding.root
     }
