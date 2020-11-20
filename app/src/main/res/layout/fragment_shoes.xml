@@ -3,6 +3,14 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+
+        <variable
+            name="shoesViewModel"
+            type="com.udacity.shoestore.viewModels.ShoesViewModel" />
+
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -16,6 +24,7 @@
             android:clickable="true"
             android:contentDescription="@string/add_shoe"
             android:focusable="true"
+            android:onClick="@{() -> shoesViewModel.onAdd()}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_add" />
@@ -30,6 +39,7 @@
             app:layout_constraintVertical_bias="0.0">
 
             <LinearLayout
+                android:id="@+id/shoesLinearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />

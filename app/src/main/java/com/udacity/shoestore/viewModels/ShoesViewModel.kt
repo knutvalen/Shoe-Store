@@ -11,6 +11,10 @@ class ShoesViewModel : ViewModel() {
     val shoes: LiveData<MutableList<Shoe>>
         get() = _shoes
 
+    private val _eventAdd = MutableLiveData<Boolean>()
+    val eventAdd: LiveData<Boolean>
+        get() = _eventAdd
+
     init {
         _shoes.value = mutableListOf(
             Shoe(
@@ -48,6 +52,20 @@ class ShoesViewModel : ViewModel() {
                         "from sunrise to sunset."
             ),
         )
+
+
+    }
+
+    fun onAdd() {
+        _eventAdd.value = true
+    }
+
+    fun onAddComplete() {
+        _eventAdd.value = false
+    }
+
+    fun onAddShoe(shoe: Shoe) {
+        _shoes.value?.add(shoe)
     }
 
 }
