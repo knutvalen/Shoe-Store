@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--    I use ConstraintLayout here because it is a somewhat complex layout. I have a LinearLayout-->
+<!--    with input views constrained at the top of the screen. I group the input fields-->
+<!--    inside the LinearLayout like this because they belong together logically, and because the-->
+<!--    vertical LinearLayout automatically handles width for its subviews. The ConstraintLayout is-->
+<!--    used here because I want to constrain the buttons to the bottom right of the screen, so to avoid-->
+<!--    nesting LinearLayouts I use ConstraintLayout - which is more efficient. -->
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -21,14 +28,14 @@
 
             <TextView
                 android:id="@+id/eMailTextView"
-                android:layout_width="379dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:labelFor="@id/editTextTextEmailAddress"
                 android:text="@string/e_mail" />
 
             <EditText
                 android:id="@+id/editTextTextEmailAddress"
-                android:layout_width="379dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autofillHints=""
                 android:ems="10"
@@ -36,14 +43,15 @@
 
             <TextView
                 android:id="@+id/passwordTextView"
-                android:layout_width="379dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:labelFor="@id/editTextTextPassword"
                 android:text="@string/password" />
 
             <EditText
                 android:id="@+id/editTextTextPassword"
-                android:layout_width="379dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:autofillHints="e-mail"
                 android:ems="10"

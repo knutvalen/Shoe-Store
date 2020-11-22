@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--    I use LinearLayout here in the activity because it is a simple view with only -->
+<!--    1 fragment - the navigation graph container fragment. LinearLayout is the most efficient on -->
+<!--    simple layouts like this. -->
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 

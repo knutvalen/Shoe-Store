@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--    Like I did in the Login Fragment I use ConstraintLayout here because it is a somewhat complex -->
+<!--    layout. I have a LinearLayout with input views constrained at the top of the screen. I group the -->
+<!--    input fields inside the LinearLayout like this because they belong together logically, and -->
+<!--    because the vertical LinearLayout automatically handles width for its subviews. The -->
+<!--    ConstraintLayout is used here because I want to constrain the buttons to the bottom right of the -->
+<!--    screen, so to avoid nesting LinearLayouts I use ConstraintLayout - which is more efficient. -->
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 

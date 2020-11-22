@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--    I use a ConstraintLayout here because I want to place a FloatingActionButton at the bottom-->
+<!--    right of the screen and also place a scrollable LinearLayout at the top of the screen. This way-->
+<!--    I can have a dynamic height of my scrollable content while also always having the-->
+<!--    FloatingActionButton at the bottom right. This is efficient for a complex layout like this. -->
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 

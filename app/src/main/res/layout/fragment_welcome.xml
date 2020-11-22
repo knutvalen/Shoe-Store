@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--    I use ConstraintLayout here because it is a somewhat complex layout. I have placed 2 TextViews-->
+<!--    at the top of the screen here constrained with margins to the ConstraintLayout because I wanted -->
+<!--    to place a button at the bottom right of the screen and this was the easiest and most efficient-->
+<!--    way to do this.  -->
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -45,6 +50,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
             app:layout_constraintVertical_bias="1.0" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
