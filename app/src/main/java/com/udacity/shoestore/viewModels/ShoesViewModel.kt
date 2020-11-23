@@ -11,6 +11,11 @@ class ShoesViewModel : ViewModel() {
     val shoes: LiveData<MutableList<Shoe>>
         get() = _shoes
 
+    val shoeName = MutableLiveData<String>()
+    val shoeSize = MutableLiveData<String>()
+    val shoeCompany = MutableLiveData<String>()
+    val shoeDescription = MutableLiveData<String>()
+
     private val _eventAdd = MutableLiveData<Boolean>()
     val eventAdd: LiveData<Boolean>
         get() = _eventAdd
@@ -56,8 +61,6 @@ class ShoesViewModel : ViewModel() {
                         "from sunrise to sunset."
             ),
         )
-
-
     }
 
     fun onAdd() {
@@ -68,15 +71,25 @@ class ShoesViewModel : ViewModel() {
         _eventAdd.value = false
     }
 
-    fun onSave(shoe: Shoe) {
-        _shoes.value?.add(shoe)
-    }
-
     fun onSave() {
+        val name = shoeName.value ?: return
+        val size = shoeSize.value?.toDouble() ?: return
+        val company = shoeCompany.value ?: return
+        val description = shoeDescription.value ?: return
+
+        shoes.value?.add(
+            Shoe(name, size, company, description)
+        )
+
         _eventSave.value = true
     }
 
     fun onSaveComplete() {
+        shoeName.value = null
+        shoeSize.value = null
+        shoeCompany.value = null
+        shoeDescription.value = null
+
         _eventSave.value = false
     }
 

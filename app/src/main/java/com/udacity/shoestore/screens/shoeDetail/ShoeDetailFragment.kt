@@ -11,7 +11,6 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
-import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.viewModels.ShoesViewModel
 
 class ShoeDetailFragment : Fragment() {
@@ -33,45 +32,23 @@ class ShoeDetailFragment : Fragment() {
 
         viewModel.eventSave.observe(viewLifecycleOwner, Observer {
             if (it) {
-                val name = binding.shoeNameEditText.text.toString()
-                val size = binding.shoeSizeEditText.text.toString()
-                val company = binding.companyEditText.text.toString()
-                val description = binding.descriptionEditText.text.toString()
-
-                if (
-                    name.isNotEmpty()
-                    && size.isNotEmpty()
-                    && company.isNotEmpty()
-                    && description.isNotEmpty()
-                ) {
-                    val shoe = Shoe(
-                        name,
-                        size.toDouble(),
-                        company,
-                        description
-                    )
-
-                    viewModel.onSave(shoe)
-                    viewModel.onSaveComplete()
-                    done()
-                }
+                viewModel.onSaveComplete()
+                findNavController().navigate(
+                    ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoesFragment()
+                )
             }
         })
 
         viewModel.eventCancel.observe(viewLifecycleOwner, Observer {
             if (it) {
                 viewModel.onCancelComplete()
-                done()
+                findNavController().navigate(
+                    ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoesFragment()
+                )
             }
         })
 
         return binding.root
-    }
-
-    private fun done() {
-        findNavController().navigate(
-            ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoesFragment()
-        )
     }
 
 }

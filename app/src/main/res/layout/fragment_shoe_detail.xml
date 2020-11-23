@@ -47,7 +47,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:importantForAutofill="no"
-                android:inputType="textPersonName|textCapWords" />
+                android:inputType="textPersonName|textCapWords"
+                android:text="@={shoesViewModel.shoeName}" />
 
             <TextView
                 android:id="@+id/companyTextView"
@@ -63,7 +64,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:importantForAutofill="no"
-                android:inputType="textPersonName|textCapWords" />
+                android:inputType="textPersonName|textCapWords"
+                android:text="@={shoesViewModel.shoeCompany}" />
 
             <TextView
                 android:id="@+id/shoeSizeTextView"
@@ -79,7 +81,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:importantForAutofill="no"
-                android:inputType="textPersonName|numberDecimal" />
+                android:inputType="textPersonName|numberDecimal"
+                android:text="@={shoesViewModel.shoeSize}" />
 
             <TextView
                 android:id="@+id/descriptionTextView"
@@ -95,7 +98,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:importantForAutofill="no"
-                android:inputType="textPersonName|textCapSentences" />
+                android:inputType="textPersonName|textCapSentences"
+                android:text="@={shoesViewModel.shoeDescription}" />
 
         </LinearLayout>
 
