@@ -2,7 +2,6 @@ package com.udacity.shoestore.screens.shoes
 
 import android.os.Bundle
 import android.view.*
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -13,6 +12,7 @@ import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoesBinding
 import com.udacity.shoestore.viewModels.ShoesViewModel
+import kotlinx.android.synthetic.main.shoe_cell.view.*
 
 class ShoesFragment : Fragment() {
 
@@ -46,9 +46,12 @@ class ShoesFragment : Fragment() {
         viewModel.shoes.observe(viewLifecycleOwner, Observer { shoes ->
             binding.shoesLinearLayout.removeAllViews()
             shoes.map { shoe ->
-                val textView = TextView(context)
-                textView.text = "$shoe.toString() \n\n"
-                binding.shoesLinearLayout.addView(textView)
+                val cell = LayoutInflater.from(context).inflate(R.layout.shoe_cell, container, false)
+                cell.shoeNameCellTextView.text = shoe.name
+                cell.companyCellTextView.text = shoe.company
+                cell.sizeCellTextView.text = shoe.size.toString()
+                cell.descriptionCellTextView.text = shoe.description
+                binding.shoesLinearLayout.addView(cell)
             }
         })
 
