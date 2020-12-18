@@ -1,7 +1,7 @@
 # The Shoe Store
 [![Build Status](https://app.bitrise.io/app/a30acf8ff76d8774/status.svg?token=grMzD210XLUfAdKqvDhN4g)](https://app.bitrise.io/app/a30acf8ff76d8774)
 
-This is the first assignment of the [Android App Development in Kotlin course on Udacity](https://www.udacity.com/course/developing-android-apps-with-kotlin--ud9012).
+This is the first assignment of the [Android Kotlin Developer Nanodegree at Udacity](https://www.udacity.com/course/android-kotlin-developer-nanodegree--nd940).
 
 This project will consist of five screens. You don't have to create a shoe store, you can use any other item as long as you create the following screens. You will be creating:
 
